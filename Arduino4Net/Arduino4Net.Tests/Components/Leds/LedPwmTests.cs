@@ -1,13 +1,12 @@
 ﻿using System;
 using Arduino4Net.Components;
 using Arduino4Net.Interfaces;
-using Arduino4Net.Models;
 using Arduino4Net.Tests.Fakes;
 using FakeItEasy;
 using NUnit.Framework;
 using Should;
 
-namespace Arduino4Net.Tests.Components
+namespace Arduino4Net.Tests.Components.Leds
 {
     public class LedPwmTests
     {

@@ -6,7 +6,7 @@ using FakeItEasy;
 using NUnit.Framework;
 using Should;
 
-namespace Arduino4Net.Tests.Components
+namespace Arduino4Net.Tests.Components.Leds
 {
     public class LedTests
     {

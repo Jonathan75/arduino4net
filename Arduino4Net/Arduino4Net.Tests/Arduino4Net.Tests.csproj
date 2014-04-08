@@ -48,9 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Components\LedPwmTests.cs" />
-    <Compile Include="Components\LedRGBTests.cs" />
-    <Compile Include="Components\LedTests.cs" />
+    <Compile Include="Components\Buttons\PushButtonTests.cs" />
+    <Compile Include="Components\Leds\LedPwmTests.cs" />
+    <Compile Include="Components\Leds\LedRGBTests.cs" />
+    <Compile Include="Components\Leds\LedTests.cs" />
     <Compile Include="Fakes\FakeTimer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

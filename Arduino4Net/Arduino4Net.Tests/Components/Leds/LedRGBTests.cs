@@ -5,7 +5,7 @@ using Arduino4Net.Tests.Fakes;
 using FakeItEasy;
 using NUnit.Framework;
 
-namespace Arduino4Net.Tests.Components
+namespace Arduino4Net.Tests.Components.Leds
 {
     public class LedRGBTests
     {

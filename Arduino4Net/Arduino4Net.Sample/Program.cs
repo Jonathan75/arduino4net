@@ -20,6 +20,7 @@ namespace Arduino4Net.Sample
             Console.WriteLine("1 - Led (Pin 13)");
             Console.WriteLine("2 - LedPwm (Pin 9)");
             Console.WriteLine("3 - LedRGB (Pins 9, 10, 11)");
+            Console.WriteLine("4 - PushButton (Pin 3)");
             switch (Console.ReadKey().KeyChar.ToString(CultureInfo.InvariantCulture))
             {
                 case "1":
@@ -31,12 +32,41 @@ namespace Arduino4Net.Sample
                 case "3":
                     LedRGB();
                     break;
+                case "4":
+                    Button();
+                    break;
+            }
+        }
+
+        private static void Button()
+        {
+            using (var board = new Arduino { Debug = true })
+            {
+                var button = new PushButton(board, 3);
+                button.Down = () =>
+                {
+                    Console.WriteLine("The button was pushed");
+                };
+                button.Up = () =>
+                {
+                    Console.WriteLine("The button was released");
+                };
+                Action hold = () =>
+                {
+                    Console.WriteLine("Waiting 500ms");
+                    Thread.Sleep(500.Milliseconds());
+                };
+                while (!Console.KeyAvailable)
+                {
+                    Console.WriteLine("The button is {0}", button.IsDown ? "down" : "up");
+                    hold();
+                }
             }
         }
 
         private static void LedRGB()
         {
-            using (var board = new Arduino {Debug = true})
+            using (var board = new Arduino { Debug = true })
             {
                 var led = new LedRGB(board, 9, 10, 11);
                 Action wait = () => Thread.Sleep(2.Seconds());
@@ -64,7 +94,7 @@ namespace Arduino4Net.Sample
 
         private static void LedPwm()
         {
-            using (var board = new Arduino {Debug = true})
+            using (var board = new Arduino { Debug = true })
             {
                 var led = new LedPwm(board, 9);
                 led.Fade(255, 1.Second());
@@ -76,7 +106,7 @@ namespace Arduino4Net.Sample
 
         private static void Led()
         {
-            using (var board = new Arduino {Debug = true})
+            using (var board = new Arduino { Debug = true })
             {
                 var led = new Led(board, 13);
                 led.StrobeOn(20);
