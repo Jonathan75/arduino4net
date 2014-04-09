@@ -1,8 +1,8 @@
-﻿using Arduino4Net.Interfaces;
+﻿using System;
+using Arduino4Net.Interfaces;
 using Arduino4Net.Models;
-using System;
 
-namespace Arduino4Net.Components
+namespace Arduino4Net.Components.Buttons
 {
     public class PushButton : SinglePinComponent
     {

@@ -2,7 +2,7 @@
 using Arduino4Net.Interfaces;
 using Arduino4Net.Models;
 
-namespace Arduino4Net.Components
+namespace Arduino4Net.Components.Leds
 {
     public abstract class LedBase : SinglePinComponent
     {

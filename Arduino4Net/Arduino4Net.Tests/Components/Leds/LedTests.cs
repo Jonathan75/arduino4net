@@ -1,4 +1,4 @@
-﻿using Arduino4Net.Components;
+﻿using Arduino4Net.Components.Leds;
 using Arduino4Net.Interfaces;
 using Arduino4Net.Models;
 using Arduino4Net.Tests.Fakes;

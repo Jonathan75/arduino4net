@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
-using Arduino4Net.Components;
+using Arduino4Net.Components.Buttons;
+using Arduino4Net.Components.Leds;
 using Arduino4Net.Extensions;
 using Arduino4Net.Models;
 
@@ -20,7 +17,7 @@ namespace Arduino4Net.Sample
             Console.WriteLine("1 - Led (Pin 13)");
             Console.WriteLine("2 - LedPwm (Pin 9)");
             Console.WriteLine("3 - LedRGB (Pins 9, 10, 11)");
-            Console.WriteLine("4 - PushButton (Pin 3)");
+            Console.WriteLine("4 - PushButton (Pin 2)");
             switch (Console.ReadKey().KeyChar.ToString(CultureInfo.InvariantCulture))
             {
                 case "1":
@@ -40,21 +37,17 @@ namespace Arduino4Net.Sample
 
         private static void Button()
         {
-            using (var board = new Arduino { Debug = true })
+            using (var board = new Arduino { Debug = false })
             {
-                var button = new PushButton(board, 3);
-                button.Down = () =>
+                var button = new PushButton(board, 2)
                 {
-                    Console.WriteLine("The button was pushed");
-                };
-                button.Up = () =>
-                {
-                    Console.WriteLine("The button was released");
+                    Down = () => Console.WriteLine("The button was pushed"),
+                    Up = () => Console.WriteLine("The button was released")
                 };
                 Action hold = () =>
                 {
-                    Console.WriteLine("Waiting 500ms");
-                    Thread.Sleep(500.Milliseconds());
+                    Console.WriteLine("Waiting 5s");
+                    Thread.Sleep(5.Seconds());
                 };
                 while (!Console.KeyAvailable)
                 {

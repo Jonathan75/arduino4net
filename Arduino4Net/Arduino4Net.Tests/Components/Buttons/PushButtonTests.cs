@@ -1,11 +1,11 @@
-﻿using Arduino4Net.Components;
+﻿using Arduino4Net.Components.Buttons;
 using Arduino4Net.Interfaces;
 using Arduino4Net.Tests.Fakes;
 using FakeItEasy;
 using NUnit.Framework;
 using Should;
 
-namespace Arduino4Net.Tests.Components.Leds
+namespace Arduino4Net.Tests.Components.Buttons
 {
     public class PushButtonTests
     {

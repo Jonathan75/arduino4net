@@ -39,11 +39,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Components\Buttons\PushButton.cs" />
-    <Compile Include="Components\Led.cs" />
-    <Compile Include="Components\LedBase.cs" />
-    <Compile Include="Components\LedPwm.cs" />
-    <Compile Include="Components\LedRGB.cs" />
-    <Compile Include="Components\LedState.cs" />
+    <Compile Include="Components\Leds\Led.cs" />
+    <Compile Include="Components\Leds\LedBase.cs" />
+    <Compile Include="Components\Leds\LedPwm.cs" />
+    <Compile Include="Components\Leds\LedRGB.cs" />
+    <Compile Include="Components\Leds\LedState.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\IntExtensions.cs" />
     <Compile Include="Interfaces\IArduino.cs" />

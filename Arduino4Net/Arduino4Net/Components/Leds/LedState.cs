@@ -1,4 +1,4 @@
-﻿namespace Arduino4Net.Components
+﻿namespace Arduino4Net.Components.Leds
 {
     public enum LedState
     {

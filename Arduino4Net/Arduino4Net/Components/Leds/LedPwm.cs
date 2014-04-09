@@ -3,7 +3,7 @@ using Arduino4Net.Extensions;
 using Arduino4Net.Interfaces;
 using Arduino4Net.Models;
 
-namespace Arduino4Net.Components
+namespace Arduino4Net.Components.Leds
 {
     public class LedPwm : LedBase
     {
