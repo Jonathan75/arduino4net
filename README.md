@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/07vcnev63j29h3mr)](https://ci.appveyor.com/project/luisrudge/arduino4net)
+
 Arduino wrapper for .NET based on Firmata protocol.
 
 Also, this project has the concept of Components, for abstracting boring stuff from you!
