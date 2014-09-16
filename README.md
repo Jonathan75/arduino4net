@@ -15,3 +15,7 @@ using (var board = new Arduino()))
     led.StrobeOff();
 }
 ```
+
+
+The Arduino.cs class is mostly based on this:
+http://www.imagitronics.org/projects/firmatanet/
